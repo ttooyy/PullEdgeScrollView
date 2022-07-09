@@ -1,4 +1,4 @@
-package com.ttooyy.pulledgescrollview
+package com.ttooyy.pull
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

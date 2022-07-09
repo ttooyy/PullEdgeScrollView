@@ -8,7 +8,7 @@ import android.view.View
 import androidx.core.widget.NestedScrollView
 import kotlin.math.abs
 
-class DampScrollView : NestedScrollView {
+class PullEdgeScrollView : NestedScrollView {
     companion object {
         private const val INVALID_POINTER = -1
         private const val RESET_DURATION = 300L
@@ -136,7 +136,7 @@ class DampScrollView : NestedScrollView {
         }
         super.onOverScrolled(scrollX, scrollY, clampedX, clampedY)
     }
-    
+
     private fun resetInnerView() {
         mIsReset = true
         mResetAnimation = ValueAnimator.ofInt(mDragView.scrollY, 0)
