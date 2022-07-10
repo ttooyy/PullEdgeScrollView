@@ -109,7 +109,7 @@ class PullEdgeScrollView : NestedScrollView {
                 mLastMotionY = 0
                 mIsBeingDragged = false
                 if (mDragView.scrollY != 0) {
-                    resetInnerView()
+                    resetDragView()
                 }
             }
             MotionEvent.ACTION_POINTER_DOWN -> {
@@ -137,7 +137,7 @@ class PullEdgeScrollView : NestedScrollView {
         super.onOverScrolled(scrollX, scrollY, clampedX, clampedY)
     }
 
-    private fun resetInnerView() {
+    private fun resetDragView() {
         mIsReset = true
         mResetAnimation = ValueAnimator.ofInt(mDragView.scrollY, 0)
         mResetAnimation?.duration = RESET_DURATION
